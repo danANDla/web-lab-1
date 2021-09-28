@@ -70,35 +70,41 @@ table{
   background: #202020;
   .input-invite{
     display: inline-block;
-    width: auto;
+    width: 25%;
     vertical-align: middle;
     margin-right: 10px;
   }
   .input-field{
     display: inline-block;
-    width: 80%;
+    width: 70%;
     vertical-align: middle;
 
-    .Y-input input[type=text]{
-        width: 80%;
-        padding: 15px 22px;
-        margin: 10px 5px;
-        box-sizing: border-box;
+    input[type=text]{
+      width: 110px;
+      font-size: 15px;
+    }
+
+    select{
+      width: 55px;
+      font-size: 15px;
     }
   }
-}
-.checkboxgroup{
-  display: inline-block;
-  text-align: center;
-  width: 10%;
-  height: 10%;
-  span{
-    font-size: 15px;
+
+  .checkboxgroup{
+      display: inline-block;
+      margin-outside: 3px;
+      text-align: center;
+      width: 7%;
+      height: 10%;
+      span{
+        font-size: 18px;
+      }
+      label{
+        display: block;
+      }
   }
-  label{
-    display: block;
-  }
 }
+
 
 .btns{
   padding: 5%;
@@ -156,6 +162,24 @@ table{
     border-collapse: collapse;
     thead{
       background: #292929;
+      .res-table-num-clmn{
+        width: 6%;
+      }
+      .res-table-X-clmn{
+        width: 16%;
+      }
+      .res-table-Y-clmn{
+        width: 16%;
+      }
+      .res-table-R-clmn{
+        width: 16%;
+      }
+      .res-table-extime-clmn{
+        width: 23%;
+      }
+      .res-table-systime-clmn{
+        width: 23%;
+      }
       td{
         text-align: center;
       }
@@ -201,6 +225,12 @@ table{
         width: 23%;
         padding-right: 3px;
         border-top: 1px solid black;
+      }
+      .first{
+        background: #59ab42;
+      }
+      .second{
+        background: #ab2a3d;
       }
     }
   }

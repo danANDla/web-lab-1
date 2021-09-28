@@ -69,32 +69,34 @@ table {
 }
 .input .input-invite {
   display: inline-block;
-  width: auto;
+  width: 25%;
   vertical-align: middle;
   margin-right: 10px;
 }
 .input .input-field {
   display: inline-block;
-  width: 80%;
+  width: 70%;
   vertical-align: middle;
 }
-.input .input-field .Y-input input[type=text] {
-  width: 80%;
-  padding: 15px 22px;
-  margin: 10px 5px;
-  box-sizing: border-box;
-}
-
-.checkboxgroup {
-  display: inline-block;
-  text-align: center;
-  width: 10%;
-  height: 10%;
-}
-.checkboxgroup span {
+.input .input-field input[type=text] {
+  width: 110px;
   font-size: 15px;
 }
-.checkboxgroup label {
+.input .input-field select {
+  width: 55px;
+  font-size: 15px;
+}
+.input .checkboxgroup {
+  display: inline-block;
+  margin-outside: 3px;
+  text-align: center;
+  width: 7%;
+  height: 10%;
+}
+.input .checkboxgroup span {
+  font-size: 18px;
+}
+.input .checkboxgroup label {
   display: block;
 }
 
@@ -156,6 +158,24 @@ table {
 .right-col table thead {
   background: #292929;
 }
+.right-col table thead .res-table-num-clmn {
+  width: 6%;
+}
+.right-col table thead .res-table-X-clmn {
+  width: 16%;
+}
+.right-col table thead .res-table-Y-clmn {
+  width: 16%;
+}
+.right-col table thead .res-table-R-clmn {
+  width: 16%;
+}
+.right-col table thead .res-table-extime-clmn {
+  width: 23%;
+}
+.right-col table thead .res-table-systime-clmn {
+  width: 23%;
+}
 .right-col table thead td {
   text-align: center;
 }
@@ -201,6 +221,12 @@ table {
   width: 23%;
   padding-right: 3px;
   border-top: 1px solid black;
+}
+.right-col table tbody .first {
+  background: #59ab42;
+}
+.right-col table tbody .second {
+  background: #ab2a3d;
 }
 
 /*# sourceMappingURL=main.css.map */
