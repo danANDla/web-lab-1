@@ -14,10 +14,12 @@
     <section class="hero">
         <table>
             <tr>
-                <td class="image-cell"><div class="svg-container"><object type="image/svg+xml" data="img/graph.svg" width="100%" height="100%" class="svg-content"></object></div></td>
+                <td class="image-cell"><div class="parent-svg-container">
+                    <div class="svg-container"><object type="image/svg+xml" data="img/graph.svg" width="100%" height="100%" class="svg-content"></object></div>
+                </div></td>
                 <td rowspan="2" class="right-col">
-                    <table class="result-table">
-                        <thead>
+                        <table class="result-table">
+                            <thead>
                             <tr>
                                 <td class="res-table-num-clmn">№</td>
                                 <td class="res-table-X-clmn">X</td>
@@ -26,45 +28,71 @@
                                 <td class="res-table-extime-clmn">execution time</td>
                                 <td class="res-table-systime-clmn">system time</td>
                             </tr>
-                        </thead>
-                    </table>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="res-table-num-clmn">1</td>
+                                <td class="res-table-X-clmn">2</td>
+                                <td class="res-table-Y-clmn">3</td>
+                                <td class="res-table-R-clmn">4</td>
+                                <td class="res-table-extime-clmn">3.0003</td>
+                                <td class="res-table-systime-clmn">21:59:55</td>
+                            </tr>
+                            <tr>
+                                <td class="res-table-num-clmn">2</td>
+                                <td class="res-table-X-clmn">1</td>
+                                <td class="res-table-Y-clmn">5</td>
+                                <td class="res-table-R-clmn">6</td>
+                                <td class="res-table-extime-clmn">2.01000</td>
+                                <td class="res-table-systime-clmn">14:59:55</td>
+                            </tr>
+                            </tbody>
+                        </table>
                 </td>
             </tr>
 
             <tr>
                 <td class="left-col">
                     <form action="">
-                        <div class="checkbox">
-                            <label for="x-input">Choose X &nbsp &nbsp</label>
-                            <select id="x-input" name="X-input">
-                                <option value="-2">-2</option>
-                                <option value="-1.5">-1.5</option>
-                                <option value="-1">-1</option>
-                                <option value="-0.5">-0.5</option>
-                                <option value="0">0</option>
-                                <option value="0.5">0.5</option>
-                                <option value="1">1</option>
-                                <option value="1.5">1.5</option>
-                                <option value="2">2</option>
-                            </select>
+                        <div class="input">
+                            <div class="input-invite"><label for="x-input">choose X</label></div>
+                            <div class="input-field">
+                                <select id="x-input" name="X-input">
+                                    <option value="-2">-2</option>
+                                    <option value="-1.5">-1.5</option>
+                                    <option value="-1">-1</option>
+                                    <option value="-0.5">-0.5</option>
+                                    <option value="0">0</option>
+                                    <option value="0.5">0.5</option>
+                                    <option value="1">1</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div class="checkbox">
-                            <label>Type Y &nbsp &nbsp<input type="text" class="Y-input" placeholder="-3...3" maxlength="10"></label> <br>
+                        <div class="input">
+                            <div class="input-invite"><label for="Y-input">type Y</label></div>
+                            <div class="input-field">
+                                <input type="text" class="Y-input" id="Y-input" placeholder="-3...3" maxlength="10">
+                            </div>
+
                         </div>
 
-                        <div class="checkbox">
-                            Choose R
-                            <div class="checkboxgroup"> <label for="R-1">1</label> <input type="radio" name="R-input-val" class="R-input" id="R-1" value="1"> </div>
-                            <div class="checkboxgroup"> <label for="R-15">1.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-15" value="1.5"> </div>
-                            <div class="checkboxgroup"> <label for="R-2">2</label> <input type="radio" name="R-input-val" class="R-input" id="R-2" value="2"> </div>
-                            <div class="checkboxgroup"> <label for="R-25">2.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-25" value="2.5"> </div>
-                            <div class="checkboxgroup"> <label for="R-3">3</label> <input type="radio" name="R-input-val" class="R-input" id="R-3" value="3"> </div> <br>
+                        <div class="input">
+                            <div class="input-invite">choose R</div>
+                            <div class="input-field">
+                                <div class="checkboxgroup"> <label for="R-1">1</label> <input type="radio" name="R-input-val" class="R-input" id="R-1" value="1"> </div>
+                                <div class="checkboxgroup"> <label for="R-15">1.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-15" value="1.5"> </div>
+                                <div class="checkboxgroup"> <label for="R-2">2</label> <input type="radio" name="R-input-val" class="R-input" id="R-2" value="2"> </div>
+                                <div class="checkboxgroup"> <label for="R-25">2.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-25" value="2.5"> </div>
+                                <div class="checkboxgroup"> <label for="R-3">3</label> <input type="radio" name="R-input-val" class="R-input" id="R-3" value="3"> </div> <br>
+                            </div>
                         </div>
 
                         <div class="btns">
-                            <input type="submit" value="send" id="submit-btn">
-                            <input type="reset" value="reset" id="reset-btn">
+                            <div class="submit-btn"><input type="submit" value="send"></div>
+                            <div class="reset-btn"><input type="reset" value="reset"></div>
                         </div>
                     </form>
                 </td>

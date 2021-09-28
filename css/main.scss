@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
-
-
 body{
   background: #343434;
   font-family: 'Montserrat',  sans-serif;
@@ -23,6 +21,15 @@ body{
   }
 }
 
+.hero{
+  padding: 1%;
+}
+
+table{
+  width: 100%;
+  height: fit-content;
+}
+
 .left-col{
   width: 40%;
   font-size: 20px;
@@ -30,8 +37,14 @@ body{
 }
 
 .image-cell{
-   width: 40%;
-   font-size: 20px;
+  width: 40%;
+  background: white;
+  div.parent-svg-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
  }
 
 .svg-container {
@@ -50,26 +63,30 @@ body{
   left: 0;
 }
 
-.hero{
-  padding: 3%;
-}
+.input{
+  padding: 4%;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  background: #202020;
+  .input-invite{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .input-field{
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
 
-table{
-  width: 100%;
-  height: fit-content;
+    .Y-input input[type=text]{
+        width: 80%;
+        padding: 15px 22px;
+        margin: 10px 5px;
+        box-sizing: border-box;
+    }
+  }
 }
-
-.right-col{
-  width: 60%;
-}
-
-.checkbox{
-  padding: 5%;
-}
-.btns{
-  padding: 5%;
-}
-
 .checkboxgroup{
   display: inline-block;
   text-align: center;
@@ -82,6 +99,113 @@ table{
     display: block;
   }
 }
+
+.btns{
+  padding: 5%;
+  text-align: center;
+  div.submit-btn{
+    display: inline-block;
+    input[type=submit] {
+      display:inline-block;
+      padding:0.35em 1.2em;
+      border:0.1em solid #FFFFFF;
+      margin:0 0.3em 0.3em 0;
+      border-radius:0.12em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-size: 20px;
+      color:#FFFFFF;
+      background-color:#292929;
+      text-align:center;
+      transition: all 0.2s;
+      &:hover{
+        color:#000000;
+        background-color:#FFFFFF;
+      }
+    }
+  }
+  div.reset-btn{
+    display: inline-block;
+    input[type=reset] {
+      display:inline-block;
+      padding:0.35em 1.2em;
+      border:0.1em solid #FFFFFF;
+      margin:0 0.3em 0.3em 0;
+      border-radius:0.12em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-size: 20px;
+      color:#FFFFFF;
+      background-color:#292929;
+      text-align:center;
+      transition: all 0.2s;
+      &:hover{
+        color:#000000;
+        background-color:#FFFFFF;
+      }
+    }
+  }
+
+}
+
+.right-col{
+  width: 60%;
+  padding-left: 1%;
+  vertical-align: top;
+  table{
+    border-collapse: collapse;
+    thead{
+      background: #292929;
+      td{
+        text-align: center;
+      }
+    }
+    tbody{
+      background: #8f8fff;
+      .res-table-num-clmn{
+        text-align: center;
+        width: 6%;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+      }
+      .res-table-X-clmn{
+        text-align: right;
+        width: 16%;
+        padding-right: 3px;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+      }
+      .res-table-Y-clmn{
+        text-align: right;
+        width: 16%;
+        padding-right: 3px;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+      }
+      .res-table-R-clmn{
+        text-align: right;
+        width: 16%;
+        padding-right: 3px;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+      }
+      .res-table-extime-clmn{
+        text-align: right;
+        width: 23%;
+        padding-right: 3px;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+      }
+      .res-table-systime-clmn{
+        text-align: right;
+        width: 23%;
+        padding-right: 3px;
+        border-top: 1px solid black;
+      }
+    }
+  }
+}
+
 
 
 
