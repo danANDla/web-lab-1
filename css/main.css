@@ -49,6 +49,10 @@ table {
   padding: 5%;
 }
 
+.bts {
+  padding: 6%;
+}
+
 .checkboxgroup {
   display: inline-block;
   text-align: center;
@@ -58,10 +62,6 @@ table {
 
 .checkboxgroup label {
   display: block;
-}
-
-input[type=radio] {
-  transform: scale();
 }
 
 /*# sourceMappingURL=main.css.map */
