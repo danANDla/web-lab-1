@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body{
+  background: #343434;
+  font-family: 'Montserrat',  sans-serif;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+.navbar{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #8f8fff;
+  text-align: center;
+  font-size: 30px;
+
+  span{
+      font-weight: 600;
+  }
+}
+
+.responsive{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.hero{
+  padding: 3%;
+}
+
+table{
+  width: 100%;
+  height: fit-content;
+}
+
+.left-col{
+  width: 40%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.result-table1{
+  width: 60%;
+}
+
+.checkbox{
+  padding: 5%;
+}
+
+.checkboxgroup{
+  display: inline-block;
+  text-align: center;
+  width: 10%;
+  height: 10%;
+}
+
+.checkboxgroup label{
+  display: block;
+}
+
+input[type=radio] {
+  transform: scale();
+}
