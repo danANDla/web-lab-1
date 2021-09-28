@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
+
+
 body{
   background: #343434;
   font-family: 'Montserrat',  sans-serif;
@@ -16,16 +18,36 @@ body{
   background: #8f8fff;
   text-align: center;
   font-size: 30px;
-
   span{
       font-weight: 600;
   }
 }
 
-.responsive{
+.left-col{
+  width: 40%;
+  font-size: 20px;
+  background: #292929;
+}
+
+.image-cell{
+   width: 40%;
+   font-size: 20px;
+ }
+
+.svg-container {
+  display: inline-block;
+  position: relative;
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero{
@@ -37,21 +59,15 @@ table{
   height: fit-content;
 }
 
-.left-col{
-  width: 40%;
-  text-align: center;
-  font-size: 30px;
-}
-
-.result-table1{
+.right-col{
   width: 60%;
 }
 
 .checkbox{
   padding: 5%;
 }
-.bts{
-  padding: 6%;
+.btns{
+  padding: 5%;
 }
 
 .checkboxgroup{
@@ -59,10 +75,12 @@ table{
   text-align: center;
   width: 10%;
   height: 10%;
-}
-
-.checkboxgroup label{
-  display: block;
+  span{
+    font-size: 15px;
+  }
+  label{
+    display: block;
+  }
 }
 
 

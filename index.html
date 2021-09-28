@@ -8,45 +8,63 @@
 <body>
     <header class="navbar">
         <span> Алексеев Даниил </span> <br>
-        вар. 6
+        вар. 312386
     </header>
 
     <section class="hero">
-        <table border="2px">
+        <table>
             <tr>
-                <td class="left-col"><img src="img/graph.png" alt="Graph" class="responsive"></td>
-                <td rowspan="2" class="result-table1"></td>
+                <td class="image-cell"><div class="svg-container"><object type="image/svg+xml" data="img/graph.svg" width="100%" height="100%" class="svg-content"></object></div></td>
+                <td rowspan="2" class="right-col">
+                    <table class="result-table">
+                        <thead>
+                            <tr>
+                                <td class="res-table-num-clmn">№</td>
+                                <td class="res-table-X-clmn">X</td>
+                                <td class="res-table-Y-clmn">Y</td>
+                                <td class="res-table-R-clmn">R</td>
+                                <td class="res-table-extime-clmn">execution time</td>
+                                <td class="res-table-systime-clmn">system time</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
             </tr>
 
             <tr>
-                <td>
+                <td class="left-col">
                     <form action="">
                         <div class="checkbox">
-                            <label for="cars">Choose X:</label>
-                            <select id="cars" name="cars">
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="fiat">Fiat</option>
-                                <option value="audi">Audi</option>
+                            <label for="x-input">Choose X &nbsp &nbsp</label>
+                            <select id="x-input" name="X-input">
+                                <option value="-2">-2</option>
+                                <option value="-1.5">-1.5</option>
+                                <option value="-1">-1</option>
+                                <option value="-0.5">-0.5</option>
+                                <option value="0">0</option>
+                                <option value="0.5">0.5</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
                             </select>
                         </div>
 
                         <div class="checkbox">
-                            <label>Y <input type="text" class="Y-input" placeholder="-5...5"></label> <br>
+                            <label>Type Y &nbsp &nbsp<input type="text" class="Y-input" placeholder="-3...3" maxlength="10"></label> <br>
                         </div>
 
                         <div class="checkbox">
-                            R
+                            Choose R
                             <div class="checkboxgroup"> <label for="R-1">1</label> <input type="radio" name="R-input-val" class="R-input" id="R-1" value="1"> </div>
+                            <div class="checkboxgroup"> <label for="R-15">1.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-15" value="1.5"> </div>
                             <div class="checkboxgroup"> <label for="R-2">2</label> <input type="radio" name="R-input-val" class="R-input" id="R-2" value="2"> </div>
-                            <div class="checkboxgroup"> <label for="R-3">3</label> <input type="radio" name="R-input-val" class="R-input" id="R-3" value="3"> </div>
-                            <div class="checkboxgroup"> <label for="R-4">4</label> <input type="radio" name="R-input-val" class="R-input" id="R-4" value="4"> </div>
-                            <div class="checkboxgroup"> <label for="R-5">5</label> <input type="radio" name="R-input-val" class="R-input" id="R-5" value="5"> </div> <br>
+                            <div class="checkboxgroup"> <label for="R-25">2.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-25" value="2.5"> </div>
+                            <div class="checkboxgroup"> <label for="R-3">3</label> <input type="radio" name="R-input-val" class="R-input" id="R-3" value="3"> </div> <br>
                         </div>
 
                         <div class="btns">
-                            <input type="submit" value="send">
-                            <input type="reset" value="reset">
+                            <input type="submit" value="send" id="submit-btn">
+                            <input type="reset" value="reset" id="reset-btn">
                         </div>
                     </form>
                 </td>
