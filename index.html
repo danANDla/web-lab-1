@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toast.css">
     <title>lab 1</title>
 </head>
 <body>
@@ -55,7 +56,7 @@
                 <td class="left-col">
                     <form method="post">
                         <div class="input">
-                            <div class="input-invite"><label for="x-input">choose X</label></div>
+                            <div class="input-invite"><label for="x-input"  id="x-invite">choose X</label></div>
                             <div class="input-field">
                                 <select id="x-input" name="X-input-val">
                                     <option disabled selected value> </option>
@@ -73,20 +74,21 @@
                         </div>
 
                         <div class="input">
-                            <div class="input-invite"><label for="Y-input">type Y</label></div>
+                            <div class="input-invite"><label for="y-input" id="y-invite">type Y</label></div>
                             <div class="input-field">
                                 <input type="text" class="Y-input-val" id="y-input" placeholder="-3...3" maxlength="10" required>
                             </div>
+                            <div class="input-error" id="y-err"></div>
                         </div>
 
                         <div class="input">
-                            <div class="input-invite">choose R</div>
+                            <div class="input-invite"  id="r-invite">choose R</div>
                             <div class="input-field">
-                                <div class="checkboxgroup"> <label for="R-1">1</label> <input type="radio" name="R-input-val" class="R-input" id="R-1" value="1"> </div>
-                                <div class="checkboxgroup"> <label for="R-15">1.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-15" value="1.5"> </div>
-                                <div class="checkboxgroup"> <label for="R-2">2</label> <input type="radio" name="R-input-val" class="R-input" id="R-2" value="2"> </div>
-                                <div class="checkboxgroup"> <label for="R-25">2.<span>5</span></label> <input type="radio" name="R-input-val" class="R-input" id="R-25" value="2.5"> </div>
-                                <div class="checkboxgroup"> <label for="R-3">3</label> <input type="radio" name="R-input-val" class="R-input" id="R-3" value="3"> </div> <br>
+                                <div class="checkboxgroup"> <label for="R-1">1</label> <input type="radio" name="r-input" class="R-input" id="R-1" value="1"> </div>
+                                <div class="checkboxgroup"> <label for="R-15">1.<span>5</span></label> <input type="radio" name="r-input" class="R-input" id="R-15" value="1.5"> </div>
+                                <div class="checkboxgroup"> <label for="R-2">2</label> <input type="radio" name="r-input" class="R-input" id="R-2" value="2"> </div>
+                                <div class="checkboxgroup"> <label for="R-25">2.<span>5</span></label> <input type="radio" name="r-input" class="R-input" id="R-25" value="2.5"> </div>
+                                <div class="checkboxgroup"> <label for="R-3">3</label> <input type="radio" name="r-input" class="R-input" id="R-3" value="3"> </div> <br>
                             </div>
                         </div>
 
@@ -99,7 +101,7 @@
             </tr>
         </table>
     </section>
-
+    <div id="snackbar">Some text some message..</div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
