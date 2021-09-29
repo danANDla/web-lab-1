@@ -115,7 +115,7 @@ function reset(){
 }
 
 function clear(){
-
+    document.getElementById("result-tbody").innerHTML="";
 }
 
 //-----------------------------submit--------------------------------
