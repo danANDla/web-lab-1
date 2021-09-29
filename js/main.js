@@ -4,7 +4,7 @@ var y = document.getElementById("y-input");
 //-----------------------------validation--------------------------------
 function validation(){
     console.log('validation func');
-    var r = $("input[name='r-input']:checked").val();
+    let r = $("input[name='r-input']:checked").val();
     if (typeof r == 'undefined') {
         r = '';
     }
@@ -67,7 +67,7 @@ function phpreq(){
 
         },
         error: function (jqXHR, exception) {
-        var msg = '';
+        let msg = '';
         if (jqXHR.status === 0) {
             msg = 'Not connect.\n Verify Network.';
         } else if (jqXHR.status == 404) {
@@ -94,21 +94,53 @@ function phpreq(){
      */
 }
 
+function submit(){
+    console.log(validation());
+    //phpreq();
+}
+
+function reset(){
+    $("input[name='r-input']:checked").prop('checked', false);
+    x.value = '';
+    y.value = '';
+
+    document.getElementById("x-invite").style.color = "white";
+    document.getElementById("x-invite").style.fontWeight = "lighter";
+    document.getElementById("y-invite").style.color = "white";
+    document.getElementById("y-invite").style.fontWeight = "lighter";
+    document.getElementById("y-err").innerHTML = "";
+    document.getElementById("r-invite").style.color = "white";
+    document.getElementById("r-invite").style.fontWeight = "lighter";
+
+}
+
+function clear(){
+
+}
+
 //-----------------------------submit--------------------------------
 $( document ).ready(function() {
-    console.log('ready!');
-        $((document).getElementById('submit-btn')).on('click', function (event){
-            event.preventDefault();
-            console.log('submitted');
-            console.log(validation());
-            //phpreq();
-        })
+    $((document).getElementById('submit-btn')).on('click', function (event){
+        event.preventDefault();
+        console.log('submitted');
+        submit();
+    })
 })
 
 //-----------------------------reset--------------------------------
 $( document ).ready(function() {
     $((document).getElementById('reset-btn')).on('click', function (event){
-        alert('resetted');
+        console.log('resetted');
         event.preventDefault();
+        reset();
+    })
+})
+
+//-----------------------------clear--------------------------------
+$( document ).ready(function() {
+    $((document).getElementById('clear-btn')).on('click', function (event){
+        console.log('cleared');
+        event.preventDefault();
+        clear();
     })
 })

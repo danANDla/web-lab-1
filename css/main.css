@@ -113,33 +113,20 @@ table {
 
 .btns {
   padding: 5%;
-  text-align: center;
+  display: flex;
 }
-.btns div.submit-btn {
+.btns .main-btns-block {
+  text-align: left;
+  display: inline-block;
+  flex-grow: 2;
+}
+.btns .main-btns-block .submit-btn {
   display: inline-block;
 }
-.btns div.submit-btn input[value=send] {
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid #FFFFFF;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 20px;
-  color: #FFFFFF;
-  background-color: #292929;
-  text-align: center;
-  transition: all 0.2s;
-}
-.btns div.submit-btn input[value=send]:hover {
-  color: #000000;
-  background-color: #FFFFFF;
-}
-.btns div.reset-btn {
+.btns .main-btns-block .reset-btn {
   display: inline-block;
 }
-.btns div.reset-btn input[value=reset] {
+.btns .main-btns-block input {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -153,9 +140,35 @@ table {
   text-align: center;
   transition: all 0.2s;
 }
-.btns div.reset-btn input[value=reset]:hover {
+.btns .main-btns-block input:hover {
   color: #000000;
   background-color: #FFFFFF;
+}
+.btns .appart-btns-block {
+  display: inline-block;
+  flex-grow: 1;
+  text-align: right;
+}
+.btns .appart-btns-block div.clear-btn {
+  display: inline-block;
+}
+.btns .appart-btns-block div.clear-btn input[value=clear] {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #292929;
+  text-align: center;
+  transition: all 0.2s;
+}
+.btns .appart-btns-block div.clear-btn input[value=clear]:hover {
+  color: white;
+  background-color: #ab2a3d;
 }
 
 .right-col {

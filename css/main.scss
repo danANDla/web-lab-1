@@ -118,10 +118,18 @@ table{
 
 .btns{
   padding: 5%;
-  text-align: center;
-  div.submit-btn{
+  display: flex;
+  .main-btns-block{
+    text-align: left;
     display: inline-block;
-    input[value=send] {
+    flex-grow: 2;
+    .submit-btn{
+      display: inline-block;
+    }
+    .reset-btn{
+      display: inline-block;
+    }
+    input {
       display:inline-block;
       padding:0.35em 1.2em;
       border:0.1em solid #FFFFFF;
@@ -140,28 +148,32 @@ table{
       }
     }
   }
-  div.reset-btn{
+  .appart-btns-block{
     display: inline-block;
-    input[value=reset] {
-      display:inline-block;
-      padding:0.35em 1.2em;
-      border:0.1em solid #FFFFFF;
-      margin:0 0.3em 0.3em 0;
-      border-radius:0.12em;
-      box-sizing: border-box;
-      text-decoration:none;
-      font-size: 20px;
-      color:#FFFFFF;
-      background-color:#292929;
-      text-align:center;
-      transition: all 0.2s;
-      &:hover{
-        color:#000000;
-        background-color:#FFFFFF;
+    flex-grow: 1;
+    text-align: right;
+    div.clear-btn{
+      display: inline-block;
+      input[value=clear] {
+        display:inline-block;
+        padding:0.35em 1.2em;
+        border:0.1em solid #FFFFFF;
+        margin:0 0.3em 0.3em 0;
+        border-radius:0.12em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-size: 20px;
+        color:#FFFFFF;
+        background-color:#292929;
+        text-align:center;
+        transition: all 0.2s;
+        &:hover{
+          color:white;
+          background-color: #ab2a3d;
+        }
       }
     }
   }
-
 }
 
 .right-col{
