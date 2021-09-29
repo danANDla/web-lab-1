@@ -53,11 +53,11 @@
 
             <tr>
                 <td class="left-col">
-                    <form action="">
+                    <form method="post">
                         <div class="input">
                             <div class="input-invite"><label for="x-input">choose X</label></div>
                             <div class="input-field">
-                                <select id="x-input" name="X-input">
+                                <select id="x-input" name="X-input-val">
                                     <option disabled selected value> </option>
                                     <option value="-2">-2</option>
                                     <option value="-1.5">-1.5</option>
@@ -75,9 +75,8 @@
                         <div class="input">
                             <div class="input-invite"><label for="Y-input">type Y</label></div>
                             <div class="input-field">
-                                <input type="text" class="Y-input" id="Y-input" placeholder="-3...3" maxlength="10">
+                                <input type="text" class="Y-input-val" id="y-input" placeholder="-3...3" maxlength="10" required>
                             </div>
-
                         </div>
 
                         <div class="input">
@@ -92,15 +91,17 @@
                         </div>
 
                         <div class="btns">
-                            <div class="submit-btn"><input type="submit" value="send"></div>
-                            <div class="reset-btn"><input type="reset" value="reset"></div>
+                            <div class="submit-btn"><input type="button" value="send" id="submit-btn"></div>
+                            <div class="reset-btn"><input type="button" value="reset" id="reset-btn"></div>
                         </div>
                     </form>
                 </td>
             </tr>
-
         </table>
     </section>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
 

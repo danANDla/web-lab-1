@@ -70,13 +70,13 @@ table{
   background: #202020;
   .input-invite{
     display: inline-block;
-    width: 25%;
+    width: 18%;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 1%;
   }
   .input-field{
     display: inline-block;
-    width: 70%;
+    width: 79%;
     vertical-align: middle;
 
     input[type=text]{
@@ -111,7 +111,7 @@ table{
   text-align: center;
   div.submit-btn{
     display: inline-block;
-    input[type=submit] {
+    input[value=send] {
       display:inline-block;
       padding:0.35em 1.2em;
       border:0.1em solid #FFFFFF;
@@ -132,7 +132,7 @@ table{
   }
   div.reset-btn{
     display: inline-block;
-    input[type=reset] {
+    input[value=reset] {
       display:inline-block;
       padding:0.35em 1.2em;
       border:0.1em solid #FFFFFF;

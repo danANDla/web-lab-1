@@ -69,13 +69,13 @@ table {
 }
 .input .input-invite {
   display: inline-block;
-  width: 25%;
+  width: 18%;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 1%;
 }
 .input .input-field {
   display: inline-block;
-  width: 70%;
+  width: 79%;
   vertical-align: middle;
 }
 .input .input-field input[type=text] {
@@ -107,7 +107,7 @@ table {
 .btns div.submit-btn {
   display: inline-block;
 }
-.btns div.submit-btn input[type=submit] {
+.btns div.submit-btn input[value=send] {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -121,14 +121,14 @@ table {
   text-align: center;
   transition: all 0.2s;
 }
-.btns div.submit-btn input[type=submit]:hover {
+.btns div.submit-btn input[value=send]:hover {
   color: #000000;
   background-color: #FFFFFF;
 }
 .btns div.reset-btn {
   display: inline-block;
 }
-.btns div.reset-btn input[type=reset] {
+.btns div.reset-btn input[value=reset] {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -142,7 +142,7 @@ table {
   text-align: center;
   transition: all 0.2s;
 }
-.btns div.reset-btn input[type=reset]:hover {
+.btns div.reset-btn input[value=reset]:hover {
   color: #000000;
   background-color: #FFFFFF;
 }
