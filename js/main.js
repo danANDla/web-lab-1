@@ -57,46 +57,50 @@ function validation(){
 
 //-----------------------------HTTP-request--------------------------------
 function phpreq(){
+    console.log("phpreq");
+    let r = $("input[name='r-input']:checked").val();
+    if (typeof r == 'undefined') {
+        r = '';
+    }
     $.ajax({
-        url: "ser.php",
-        type: "post",
+        url: "../ser.php",
+        type: "GET",
         data: {
-            "x-val": x.value
+            "x-val": x.value,
+            "y-val": y.value,
+            "r-val": r
         },
+        cache: false,
         success: function (response){
-
+            console.log('success');
+            //let table = document.getElementById("result-tbody");
+            //table.insertAdjacentHTML('beforeend', response);
         },
         error: function (jqXHR, exception) {
-        let msg = '';
-        if (jqXHR.status === 0) {
-            msg = 'Not connect.\n Verify Network.';
-        } else if (jqXHR.status == 404) {
-            msg = 'Requested page not found. [404]';
-        } else if (jqXHR.status == 500) {
-            msg = 'Internal Server Error [500].';
-        } else if (exception === 'parsererror') {
-            msg = 'Requested JSON parse failed.';
-        } else if (exception === 'timeout') {
-            msg = 'Time out error.';
-        } else if (exception === 'abort') {
-            msg = 'Ajax request aborted.';
-        } else {
-            msg = 'Uncaught Error.\n' + jqXHR.responseText;
-        }
-        $('#post').html(msg);
-    },
+            let msg = '';
+            if (jqXHR.status === 0) {
+                msg = 'Not connect.\n Verify Network.';
+            } else if (jqXHR.status == 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (jqXHR.status == 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + jqXHR.responseText;
+            }
+            $('#post').html(msg);
+        },
     })
-    /*
-    url = let req = new XMLHttpRequest();
-    req.open( "POST", theUrl, false );
-    req.send( null );
-    return xmlHttp.responseText;
-     */
 }
 
 function submit(){
     console.log(validation());
-    //phpreq();
+    if(validation()) phpreq();
 }
 
 function reset(){
