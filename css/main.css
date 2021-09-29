@@ -75,7 +75,7 @@ table {
 }
 .input .input-field {
   display: inline-block;
-  width: 79%;
+  width: 30%;
   vertical-align: middle;
 }
 .input .input-field input[type=text] {
@@ -86,18 +86,29 @@ table {
   width: 55px;
   font-size: 15px;
 }
-.input .checkboxgroup {
+.input .input-checkbox-field {
   display: inline-block;
-  margin-outside: 3px;
+  width: 80%;
+  vertical-align: middle;
+}
+.input .input-checkbox-field .checkboxgroup {
+  display: inline-block;
   text-align: center;
   width: 7%;
+  min-width: 25px;
   height: 10%;
 }
-.input .checkboxgroup span {
+.input .input-checkbox-field .checkboxgroup span {
   font-size: 18px;
 }
-.input .checkboxgroup label {
+.input .input-checkbox-field .checkboxgroup label {
   display: block;
+}
+.input .input-error {
+  display: inline-block;
+  font-size: small;
+  font-style: italic;
+  color: #AC2205;
 }
 
 .btns {

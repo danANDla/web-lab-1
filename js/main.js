@@ -25,7 +25,7 @@ function validation(){
         document.getElementById("x-invite").style.color = "white";
         document.getElementById("x-invite").style.fontWeight = "lighter";
     }
-    if (y.value === '' || y.value>3 || y.value<-3){
+    if (y.value === '' || y.value>3 || y.value<-3 || isNaN(y.value)){
         y_flag = false;
         if(y.value === ''){
             document.getElementById("y-invite").style.color = "#AC2205";
@@ -35,7 +35,7 @@ function validation(){
         else{
             document.getElementById("y-invite").style.color = "white";
             document.getElementById("y-invite").style.fontWeight = "lighter";
-            document.getElementById("y-err").innerHTML = "(your value is not in (-3;3)";
+            document.getElementById("y-err").innerHTML = "(your value is not a number from (-3;3)";
         }
     }
     else{

@@ -76,7 +76,7 @@ table{
   }
   .input-field{
     display: inline-block;
-    width: 79%;
+    width: 30%;
     vertical-align: middle;
 
     input[type=text]{
@@ -89,12 +89,15 @@ table{
       font-size: 15px;
     }
   }
-
-  .checkboxgroup{
+  .input-checkbox-field{
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+    .checkboxgroup{
       display: inline-block;
-      margin-outside: 3px;
       text-align: center;
       width: 7%;
+      min-width: 25px;
       height: 10%;
       span{
         font-size: 18px;
@@ -102,6 +105,13 @@ table{
       label{
         display: block;
       }
+    }
+  }
+  .input-error{
+    display: inline-block;
+    font-size: small;
+    font-style: italic;
+    color: #AC2205;
   }
 }
 
