@@ -184,23 +184,20 @@ table{
     border-collapse: collapse;
     thead{
       background: #292929;
-      .res-table-num-clmn{
-        width: 6%;
-      }
       .res-table-X-clmn{
-        width: 16%;
+        width: 17%;
       }
       .res-table-Y-clmn{
-        width: 16%;
+        width: 17%;
       }
       .res-table-R-clmn{
-        width: 16%;
+        width: 17%;
       }
       .res-table-extime-clmn{
-        width: 23%;
+        width: 24%;
       }
       .res-table-systime-clmn{
-        width: 23%;
+        width: 24%;
       }
       td{
         text-align: center;
@@ -208,50 +205,44 @@ table{
     }
     tbody{
       background: #8f8fff;
-      .res-table-num-clmn{
-        text-align: center;
-        width: 6%;
-        border-right: 1px solid black;
-        border-top: 1px solid black;
-      }
       .res-table-X-clmn{
         text-align: right;
-        width: 16%;
+        width: 17%;
         padding-right: 3px;
         border-right: 1px solid black;
         border-top: 1px solid black;
       }
       .res-table-Y-clmn{
         text-align: right;
-        width: 16%;
+        width: 17%;
         padding-right: 3px;
         border-right: 1px solid black;
         border-top: 1px solid black;
       }
       .res-table-R-clmn{
         text-align: right;
-        width: 16%;
+        width: 17%;
         padding-right: 3px;
         border-right: 1px solid black;
         border-top: 1px solid black;
       }
       .res-table-extime-clmn{
         text-align: right;
-        width: 23%;
+        width: 24%;
         padding-right: 3px;
         border-right: 1px solid black;
         border-top: 1px solid black;
       }
       .res-table-systime-clmn{
         text-align: right;
-        width: 23%;
+        width: 24%;
         padding-right: 3px;
         border-top: 1px solid black;
       }
-      .first{
+      .hit{
         background: #59ab42;
       }
-      .second{
+      .miss{
         background: #ab2a3d;
       }
     }

@@ -182,23 +182,20 @@ table {
 .right-col table thead {
   background: #292929;
 }
-.right-col table thead .res-table-num-clmn {
-  width: 6%;
-}
 .right-col table thead .res-table-X-clmn {
-  width: 16%;
+  width: 17%;
 }
 .right-col table thead .res-table-Y-clmn {
-  width: 16%;
+  width: 17%;
 }
 .right-col table thead .res-table-R-clmn {
-  width: 16%;
+  width: 17%;
 }
 .right-col table thead .res-table-extime-clmn {
-  width: 23%;
+  width: 24%;
 }
 .right-col table thead .res-table-systime-clmn {
-  width: 23%;
+  width: 24%;
 }
 .right-col table thead td {
   text-align: center;
@@ -206,50 +203,44 @@ table {
 .right-col table tbody {
   background: #8f8fff;
 }
-.right-col table tbody .res-table-num-clmn {
-  text-align: center;
-  width: 6%;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-}
 .right-col table tbody .res-table-X-clmn {
   text-align: right;
-  width: 16%;
+  width: 17%;
   padding-right: 3px;
   border-right: 1px solid black;
   border-top: 1px solid black;
 }
 .right-col table tbody .res-table-Y-clmn {
   text-align: right;
-  width: 16%;
+  width: 17%;
   padding-right: 3px;
   border-right: 1px solid black;
   border-top: 1px solid black;
 }
 .right-col table tbody .res-table-R-clmn {
   text-align: right;
-  width: 16%;
+  width: 17%;
   padding-right: 3px;
   border-right: 1px solid black;
   border-top: 1px solid black;
 }
 .right-col table tbody .res-table-extime-clmn {
   text-align: right;
-  width: 23%;
+  width: 24%;
   padding-right: 3px;
   border-right: 1px solid black;
   border-top: 1px solid black;
 }
 .right-col table tbody .res-table-systime-clmn {
   text-align: right;
-  width: 23%;
+  width: 24%;
   padding-right: 3px;
   border-top: 1px solid black;
 }
-.right-col table tbody .first {
+.right-col table tbody .hit {
   background: #59ab42;
 }
-.right-col table tbody .second {
+.right-col table tbody .miss {
   background: #ab2a3d;
 }
 

@@ -73,8 +73,8 @@ function phpreq(){
         cache: false,
         success: function (response){
             console.log('success');
-            //let table = document.getElementById("result-tbody");
-            //table.insertAdjacentHTML('beforeend', response);
+            let table = document.getElementById("result-tbody");
+            table.insertAdjacentHTML('beforeend', response);
         },
         error: function (jqXHR, exception) {
             let msg = '';
@@ -99,7 +99,6 @@ function phpreq(){
 }
 
 function submit(){
-    console.log(validation());
     if(validation()) phpreq();
 }
 
