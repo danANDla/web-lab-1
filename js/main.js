@@ -35,7 +35,7 @@ function validation(){
         else{
             document.getElementById("y-invite").style.color = "white";
             document.getElementById("y-invite").style.fontWeight = "lighter";
-            document.getElementById("y-err").innerHTML = "(your value is not a number from (-3;3)";
+            document.getElementById("y-err").innerHTML = "(value should be a number from (-3;3)";
         }
     }
     else{
@@ -73,6 +73,8 @@ function phpreq(){
         cache: false,
         success: function (response){
             console.log('success');
+            let msg = "";
+            $('#post').html(msg);
             let table = document.getElementById("result-tbody");
             table.insertAdjacentHTML('beforeend', response);
         },
@@ -129,6 +131,17 @@ $( document ).ready(function() {
         submit();
     })
 })
+
+$(document).ready(function() {
+    $('form input[type="text"]').keydown(function(event){
+        if(event.keyCode === 13) {
+            event.preventDefault();
+            console.log('submitted');
+            submit();
+        }
+    });
+});
+
 
 //-----------------------------reset--------------------------------
 $( document ).ready(function() {
