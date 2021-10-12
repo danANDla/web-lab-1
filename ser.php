@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_GET['x-val']) && isset($_GET['y-val']) && isset($_GET['r-val'])) {
 
     $r = floatval(htmlspecialchars($_GET["r-val"]));
@@ -32,11 +33,16 @@ function result($x, $y, $r, $cur_time)
     $ex_time = round(microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'], 7);
     $cur_time = date('H:i:s', time() - $_GET['date'] * 60);
     $res = hitted($x, $y, $r);
+    $line = array($x, $y, $r, $ex_time, $cur_time, $res);
+    if (!isset($_SESSION['result_table'])) {
+        $_SESSION['result_table'] = array();
+    }
+    array_push($_SESSION['result_table'], $line);
     if($res){
         print_r('<tr class="hit"><td class="res-table-X-clmn">'.$x.'</td><td class="res-table-Y-clmn">'.$y.'</td><td class="res-table-R-clmn">'.$r.'</td><td class="res-table-extime-clmn">'.$ex_time.'</td><td class="res-table-systime-clmn">'.$cur_time.'</td></tr>');
     }
     else{
         print_r('<tr class="miss"><td class="res-table-X-clmn">'.$x.'</td><td class="res-table-Y-clmn">'.$y.'</td><td class="res-table-R-clmn">'.$r.'</td><td class="res-table-extime-clmn">'.$ex_time.'</td><td class="res-table-systime-clmn">'.$cur_time.'</td></tr>');
     }
-
 }
+?>

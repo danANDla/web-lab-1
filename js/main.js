@@ -75,7 +75,7 @@ function phpreq(){
             console.log('success');
             let msg = "";
             $('#post').html(msg);
-            let table = document.getElementById("result-tbody");
+            let table = document.getElementById("result-table-body");
             table.insertAdjacentHTML('beforeend', response);
         },
         error: function (jqXHR, exception) {
@@ -120,15 +120,56 @@ function reset(){
 }
 
 function clear(){
-    document.getElementById("result-tbody").innerHTML="";
+    document.getElementById("result-table-body").innerHTML="";
+    $.ajax({
+        url: "../clear.php",
+        type: "GET",
+        cache: false,
+        success: function (response){
+            console.log('success');
+            let msg = "";
+            $('#post').html(msg);
+        },
+        error: function (jqXHR, exception) {
+            let msg = '';
+            if (jqXHR.status === 0) {
+                msg = 'Not connect.\n Verify Network.';
+            } else if (jqXHR.status == 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (jqXHR.status == 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + jqXHR.responseText;
+            }
+            $('#post').html(msg);
+        },
+    })
+}
+
+function restore(){
+    $.ajax({
+        url: "../restore.php",
+        async: true,
+        type: "GET",
+        success: function (response){
+            let table = document.getElementById("result-table-body");
+            table.insertAdjacentHTML('beforeend', response);
+        }
+    })
 }
 
 //-----------------------------submit--------------------------------
 $( document ).ready(function() {
     $((document).getElementById('submit-btn')).on('click', function (event){
         event.preventDefault();
-        console.log('submitted');
         submit();
+        console.log('submitted');
     })
 })
 
@@ -136,8 +177,8 @@ $(document).ready(function() {
     $('form input[type="text"]').keydown(function(event){
         if(event.keyCode === 13) {
             event.preventDefault();
-            console.log('submitted');
             submit();
+            console.log('submitted');
         }
     });
 });
@@ -146,17 +187,23 @@ $(document).ready(function() {
 //-----------------------------reset--------------------------------
 $( document ).ready(function() {
     $((document).getElementById('reset-btn')).on('click', function (event){
-        console.log('resetted');
         event.preventDefault();
         reset();
+        console.log('resetted');
     })
 })
 
-//-----------------------------clear--------------------------------
+//-----------------------------clear table--------------------------------
 $( document ).ready(function() {
     $((document).getElementById('clear-btn')).on('click', function (event){
-        console.log('cleared');
         event.preventDefault();
         clear();
+        console.log('cleared');
     })
+})
+
+//-----------------------------restore table--------------------------------
+$(document).ready(function () {
+    restore();
+    console.log('restored');
 })
