@@ -51,6 +51,25 @@ function result($x, $y, $r, $cur_time)
 }
 
 function validate($x, $y, $r){
-    return is_numeric($x) && is_numeric($y) && is_numeric($r);
+    $nums = is_numeric($x) && is_numeric($y) && is_numeric($r);
+    $nulls = is_null($x) || is_null($y) || is_null($r);
+    $x_fl = false;
+    $y_fl = false;
+    $r_fl = false;
+    if($nums && !$nulls){
+        if($x==-2 || $x==-1.5 || $x==-1 || $x==-0.5 || $x==0 || $x==2 || $x==1.5 || $x==1 || $x==0.5){
+            $x_fl = true;
+        }
+        if($r==1 || $r==1.5 || $r==2 || $r==2.5 || $r==3){
+            $r_fl = true;
+        }
+        if($y >= -3 && $y <= 3){
+            $y_fl = true;
+        }
+    }
+    else{
+        return false;
+    }
+    return $x_fl && $y_fl && $r_fl;
 }
 ?>

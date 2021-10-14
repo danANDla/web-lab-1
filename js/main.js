@@ -76,7 +76,19 @@ function phpreq(){
             let msg = "";
             $('#post').html(msg);
             let table = document.getElementById("result-table-body");
-            table.insertAdjacentHTML('beforeend', response);
+            if(response === "invalid values"){
+                document.getElementById("x-invite").style.color = "#AC2205";
+                document.getElementById("x-invite").style.fontWeight = "normal";
+
+                document.getElementById("y-invite").style.color = "#AC2205";
+                document.getElementById("y-invite").style.fontWeight = "normal";
+
+                document.getElementById("r-invite").style.color = "#AC2205";
+                document.getElementById("r-invite").style.fontWeight = "normal";
+            }
+            else{
+                table.insertAdjacentHTML('beforeend', response);
+            }
         },
         error: function (jqXHR, exception) {
             let msg = '';
