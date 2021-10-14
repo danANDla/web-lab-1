@@ -63,7 +63,7 @@ function phpreq(){
         r = '';
     }
     $.ajax({
-        url: "../ser.php",
+        url: "ser.php",
         type: "GET",
         data: {
             "x-val": x.value,
@@ -122,7 +122,7 @@ function reset(){
 function clear(){
     document.getElementById("result-table-body").innerHTML="";
     $.ajax({
-        url: "../clear.php",
+        url: "clear.php",
         type: "GET",
         cache: false,
         success: function (response){
@@ -154,7 +154,7 @@ function clear(){
 
 function restore(){
     $.ajax({
-        url: "../restore.php",
+        url: "restore.php",
         async: true,
         type: "GET",
         success: function (response){

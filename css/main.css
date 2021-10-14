@@ -153,7 +153,7 @@ table {
 .btns .appart-btns-block div.clear-btn {
   display: inline-block;
 }
-.btns .appart-btns-block div.clear-btn input[value=clear] {
+.btns .appart-btns-block div.clear-btn input {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -167,7 +167,7 @@ table {
   text-align: center;
   transition: all 0.2s;
 }
-.btns .appart-btns-block div.clear-btn input[value=clear]:hover {
+.btns .appart-btns-block div.clear-btn input:hover {
   color: white;
   background-color: #ab2a3d;
 }
