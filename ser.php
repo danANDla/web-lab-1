@@ -5,10 +5,14 @@ if (isset($_GET['x-val']) && isset($_GET['y-val']) && isset($_GET['r-val'])) {
     $r = floatval(htmlspecialchars($_GET["r-val"]));
     $x = floatval(htmlspecialchars($_GET["x-val"]));
     $y = floatval(htmlspecialchars($_GET["y-val"]));
+    if(validate($x, $y, $r)){
+        $cur_time = date('H:i:s', time() - $_GET['date'] * 60);
+        result($x, $y, $r, $cur_time);
+    }
+    else{
+        echo "invalid values";
+    }
 
-    $cur_time = date('H:i:s', time() - $_GET['date'] * 60);
-
-    result($x, $y, $r, $cur_time);
 }
 
 function hitted($x, $y, $r){
@@ -44,5 +48,9 @@ function result($x, $y, $r, $cur_time)
     else{
         print_r('<tr class="miss"><td class="res-table-X-clmn">'.$x.'</td><td class="res-table-Y-clmn">'.$y.'</td><td class="res-table-R-clmn">'.$r.'</td><td class="res-table-extime-clmn">'.$ex_time.'</td><td class="res-table-systime-clmn">'.$cur_time.'</td></tr>');
     }
+}
+
+function validate($x, $y, $r){
+    return is_numeric($x) && is_numeric($y) && is_numeric($r);
 }
 ?>
