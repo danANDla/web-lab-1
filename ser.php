@@ -1,18 +1,19 @@
 <?php
 session_start();
 if (isset($_GET['x-val']) && isset($_GET['y-val']) && isset($_GET['r-val'])) {
-
-    $r = floatval(htmlspecialchars($_GET["r-val"]));
-    $x = floatval(htmlspecialchars($_GET["x-val"]));
-    $y = floatval(htmlspecialchars($_GET["y-val"]));
+    $r = htmlspecialchars($_GET["r-val"]);
+    $x = htmlspecialchars($_GET["x-val"]);
+    $y = htmlspecialchars($_GET["y-val"]);
     if(validate($x, $y, $r)){
+        $x = floatval($x);
+        $y = floatval($y);
+        $r = floatval($r);
         $cur_time = date('H:i:s', time() - $_GET['date'] * 60);
         result($x, $y, $r, $cur_time);
     }
     else{
         echo "invalid values";
     }
-
 }
 
 function hitted($x, $y, $r){
